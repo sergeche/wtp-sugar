@@ -70,6 +70,8 @@ public class CSSCompletionProposalComputer implements
 		} catch (BadLocationException e) {}
 		
 		if (content != null) {
+			content = content.trim();
+			
 			// get prefix
 			int valuePos = 4; // add 'url(' length
 			if (content.startsWith("\"", 4) || content.startsWith("'", 4)) {
